@@ -1,0 +1,25 @@
+{
+    "name": "clock",
+    "version": "0.1.0",
+    "description": "A fancy clock.",
+    "repository": "huang2002/clock",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "start": "3h-serve dist -p 8080",
+        "test": "node test/server",
+        "build": "rollup -c",
+        "typecheck": "tsc",
+        "deploy": "now dist"
+    },
+    "devDependencies": {
+        "3h-serve": "^0.6.0",
+        "@babel/core": "^7.5.0",
+        "@babel/preset-env": "^7.5.0",
+        "hengine": "^0.38.6",
+        "rollup": "^1.17.0",
+        "rollup-plugin-babel": "^4.3.0",
+        "rollup-plugin-terser": "^5.1.0",
+        "typescript": "^3.5.0"
+    }
+}
