@@ -37,7 +37,7 @@ const particlePool = new HE.Pool(HE.Rectangle, {
     },
 });
 
-particlePool.size = 50;
+particlePool.size = 60;
 
 /** @param {import("./mainScene.js").Position} position */
 export const addParticle = position => {
