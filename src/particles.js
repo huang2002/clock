@@ -31,6 +31,7 @@ const particlePool = new HE.Pool(HE.Rectangle, {
     width: TILE_SIZE,
     height: TILE_SIZE,
     gravity: GRAVITY,
+    maxSpeed: 80,
     style: {
         strokeStyle: null,
     },
