@@ -12,11 +12,11 @@ mainScene.add(ground);
 
 const REPOSITORY_URL = 'https://github.com/huang2002/clock';
 
-const getLinkPositionY = () => renderer.bounds.bottom - 15;
-
 const link = new HE.Rectangle({
     interactive: true,
-    position: HE.Vector.of(0, getLinkPositionY()),
+    position: renderer.createUIVector(
+        renderer => ({ x: 0, y: renderer.bounds.bottom - 15 })
+    ),
     width: 120,
     height: 25,
     style: {
@@ -36,10 +36,6 @@ const link = new HE.Rectangle({
     ],
 }).on('click', () => {
     window.open(REPOSITORY_URL);
-});
-
-renderer.on('resize', () => {
-    link.y = getLinkPositionY();
 });
 
 mainScene.attach(link);

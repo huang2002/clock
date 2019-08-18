@@ -8,18 +8,20 @@ const GROUND_HEIGHT = 100,
     PARTICLE_COLORS = ['#F00', '#F90', '#FF0', '#9F0', '#0F0',
         '#090', '#09F', '#00F', '#90F', '#F0F', '#F09'];
 
-const getGroundPositionY = () => renderer.bounds.bottom + GROUND_HEIGHT / 2;
+const groundPosition = renderer.createUIVector(
+    renderer => ({ x: 0, y: renderer.bounds.bottom + GROUND_HEIGHT / 2 })
+);
 
 export const ground = new HE.Rectangle({
     tag: 'ground',
     visible: false,
-    position: HE.Vector.of(0, getGroundPositionY()),
+    position: groundPosition.clone(),
     width: renderer.width,
     height: GROUND_HEIGHT,
 });
 
-renderer.on('resize', () => {
-    ground.y = getGroundPositionY();
+ground.on('willUpdate', () => {
+    ground.moveToVector(groundPosition);
 });
 
 const particlePool = new HE.Pool(HE.Rectangle, {
