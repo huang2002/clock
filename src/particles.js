@@ -2,7 +2,7 @@ import { TILE_SIZE } from "./tiles.js";
 import { mainScene } from "./mainScene.js";
 import { renderer } from "./common.js";
 
-const GROUND_HEIGHT = 600,
+const GROUND_HEIGHT = 6666,
     PARTICLE_LIFE = 4000,
     GRAVITY = HE.Vector.of(0, 1.6),
     PARTICLE_COLORS = ['#F00', '#F90', '#FF0', '#9F0', '#0F0',
