@@ -16,7 +16,7 @@ export const ground = new HE.Rectangle({
     tag: 'ground',
     visible: false,
     position: groundPosition.clone(),
-    width: renderer.width,
+    width: 9999,
     height: GROUND_HEIGHT,
 });
 
