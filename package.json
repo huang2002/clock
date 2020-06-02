@@ -9,8 +9,7 @@
         "start": "3h-serve dist -p 8080",
         "test": "node test/server",
         "build": "rollup -c",
-        "typecheck": "tsc",
-        "deploy": "now dist"
+        "typecheck": "tsc"
     },
     "devDependencies": {
         "3h-serve": "^0.6.0",
